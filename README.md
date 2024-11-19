@@ -1,10 +1,9 @@
-# nats-docker
+# nats-jetstream-docker
 
 [![License][License-Image]][License-Url]
 
-This is the repository for building the official [NATS server Docker images]. If you
-just want to use NATS server, then head over to [Docker Hub]. You don't need
-this repository.
+This is the repository for building the unofficial [NATS server Docker images] with JetStream support out of the box. If you
+just want to use NATS JetStream server within GitHub Actions, then you may find this fork useful.
 
 The rest of this readme is for image maintainers.
 
