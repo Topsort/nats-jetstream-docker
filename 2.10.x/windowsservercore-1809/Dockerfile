@@ -35,4 +35,4 @@ COPY nats-server.conf C:\\nats-server.conf
 
 EXPOSE 4222 8222 6222
 ENTRYPOINT ["C:\\nats-server.exe"]
-CMD ["--config", "nats-server.conf"]
+CMD ["--js", "--config", "nats-server.conf"]
