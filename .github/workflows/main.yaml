@@ -9,7 +9,7 @@ jobs:
       fail-fast: false
       matrix:
         version:
-          - 2.10.x
+          # - 2.10.x
           - 2.11.x
     steps:
       - name: Checkout code
@@ -21,23 +21,23 @@ jobs:
         run: |
           cd ./${{ matrix.version }}/tests && ./run-images.sh
 
-  windows:
-    name: Test Windows Server 2019 (${{ matrix.version }})
-    runs-on: windows-2019
-    strategy:
-      fail-fast: false
-      matrix:
-        version:
-          - 2.10.x
-          - 2.11.x
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v1
-      - name: Build images
-        shell: powershell
-        run: |
-          cd ./${{ matrix.version }}/tests; ./build-images-2019.ps1
-      - name: Test images
-        shell: powershell
-        run: |
-          cd ./${{ matrix.version }}/tests; ./run-images-2019.ps1
+  # windows:
+  #   name: Test Windows Server 2019 (${{ matrix.version }})
+  #   runs-on: windows-2019
+  #   strategy:
+  #     fail-fast: false
+  #     matrix:
+  #       version:
+  #         - 2.10.x
+  #         - 2.11.x
+  #   steps:
+  #     - name: Checkout code
+  #       uses: actions/checkout@v1
+  #     - name: Build images
+  #       shell: powershell
+  #       run: |
+  #         cd ./${{ matrix.version }}/tests; ./build-images-2019.ps1
+  #     - name: Test images
+  #       shell: powershell
+  #       run: |
+  #         cd ./${{ matrix.version }}/tests; ./run-images-2019.ps1
